@@ -1,0 +1,423 @@
+<!-- <html ng-app="controllerASAPP">
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+        <style>body {font-size: 1.5em;}</style>
+        <title>Hello world</title>
+    </head> -->
+    <!-- <body ng-app="NameCalculator">
+        
+            hello coursera I AM going
+    </h1>
+        <h1>Name Calculator</h1> 
+         <div id="nameCalculator">
+            <div>
+                your Name:<input type:"text" id="name">
+            </div>
+            <div id="output"></div>
+        </div> -->
+        <!-- <div ng-controller="NameCalculatorController">
+            <div>
+                Your Name:
+                <input type="text" ng-model="name" ng-keyup="displayNumeric()">
+            </div>
+            <div>Total Numeric value of persons is: {{totalvalue}}
+            </div>
+        </div>
+    </body>
+    <body> -->
+        <!-- <h1>My First angular application</h1>
+        <div ng-controller="MyFirstController">
+            {{sayhello()}} -->
+            <!-- <input type="text" ng-model="name">
+            Inside My Input Is:{{name}} 
+        </div> -->
+        
+    <!-- </body> --> 
+ 
+    <!-- <body>
+        <h1>Dependency injection in javscript</h1>
+        <div ng-controller="DiController"><input type="text" ng-model="name" ng-blur="upper()"></div>
+    </body> -->
+    <!-- <body>
+        <h1>Exressions and interpoltion</h1>
+        <div ng-controller='MsgController'>
+            message is:<br>
+            original:{{saymessage()}}
+            <br>
+            Loves:{{ LoveMsg() }}
+            truth: {{ LoveMsg() | truth: 'food':'meat' }}
+            <br>
+            Big Truth:{{ LoveMsg() | truth: 'food':'meat' | uppercase}}
+            {{'hello'|uppercase}}<br>
+            
+            <div>
+                <button ng-click="feedyakov()">FeedYakoav</button>
+                cost:{{ Cookiecost | currency :"#blah" :4}}
+                <br>
+                <img ng-src="images/yakoav_{{stateofbeing}}.png">
+            </div>
+        </div>
+    </body> -->
+    <!-- <body>
+        <h1>The digest cycle</h1>
+        <div ng-controller="CounterController">
+            <button ng-click="ShowNumberOfWatchers()">Log # of Watchers</button>
+            <input type="text" ng-model="name">
+            <div>
+                <button ng-click="countOnce()">Up Once Counter (once)</button>
+                <button ng-click="counter1()">Up Counter (once)</button>
+            </div>
+            <div>
+                OnceCounter={{onceCounter}}
+                counter={{counter}}
+            </div>
+        </div>
+    </body> -->
+    <!-- <body>
+        <h1>2-way,1-way and 1 time binding</h1>
+        <div ng-controller="Bindingcontroller">
+            <button ng-click="ShowNumberofwatchers()">log # of watchers</button>
+            <button ng-click="Fullname()">Set Full name</button><br>
+            Full Name is:{{:: fullname}}<br>
+            <button ng-click="logfirstname()">Log first Name</button><br>
+            <button ng-click="logFullNmae()">Log ful name</button>
+            <div>
+                <input type="text" ng-model="firstname">
+            </div>
+        </div>
+
+    </body> -->
+    <!-- <body>
+        <h1>REPEAT</h1>
+        <div ng-controller="ShopiingListController">
+            <h3>Shopping list</h3>
+            <input type="text" ng-model="search">
+            <ul>
+                <li ng-repeat="item in shopingList1 | filter : search">{{ item }}</li>
+            </ul> -->
+            <!-- <u1>
+                <li ng-repeat="item in shoppingList2"> buy {{ item.quantity }} of {{item.name}}(s)</li>
+            </u1> -->
+            <!-- <input type="text" ng-model="shoppingList2[0].quantity">
+            <u1>
+                <li ng-repeat="item in shoppingList2"> {{$index+1}}. buy {{ item.quantity }} of {{item.name}}(s)</li>
+            </u1>
+            <input type="text" ng-model="ItemName" placeholder="item name">
+            <br>
+            <input type="text" ng-model="ItemQuantity" placeholder="item quantity">
+            <br>
+            <button ng-click="new1()">ADD TO LIST</button> -->
+        <!-- </div>
+    </body>
+     -->
+     <!-- <body>
+         <h1>Controller as syntax</h1> -->
+         <!-- <div ng-controller="controller1">
+             <div ng-controller="controller2"></div>
+         </div> -->
+         <!-- <div ng-controller='parentcontroller2 as parent'>
+             parent value:{{parent.value}}
+             <div ng-controller='childcontroller2 as child'>
+                 child value:{{child.value}}
+             </div>
+         </div> 
+     </body> -->
+<!-- </html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Custom Service</title>
+  </head>
+  <body>
+    <h1>Custom Service</h1>
+    <div ng-controller='ShoppingListAddController as itemAdder'>
+      <input type="text" ng-model="itemAdder.itemName" placeholder="item name">
+      <input type="text" ng-model="itemAdder.itemQuantity" placeholder="quantity">
+      <button ng-click="itemAdder.addItem();">Add Item To Shopping List</button>
+    </div>
+
+    <div ng-controller='ShoppingListShowController as showList'>
+      <ol>
+        <li ng-repeat="item in showList.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="showList.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ControllerAsApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Service</title>
+  </head>
+  <body>
+    <h1>Custom Service Through a Factory</h1>
+
+    <!-- LIST #1 - unlimited items -->
+    <!-- <div id="list1" ng-controller='ShoppingListController1 as list1'>
+      <h3>Shopping List #1</h3>
+      <input type="text" ng-model="list1.itemName" placeholder="item name">
+      <input type="text" ng-model="list1.itemQuantity" placeholder="quantity">
+      <button ng-click="list1.addItem();">Add Item</button>
+      <ol> -->
+        <!-- <li ng-repeat="item in list1.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list1.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+      <div class="error">Error: {{list1.errorMessage}}</div>
+    </div> -->
+
+    <!-- LIST #2 (limited to 3 items) -->
+    <!-- <div id="list2" ng-controller='ShoppingListController2 as list2'>
+      <h3>Shopping List #2 (limited to 3 items)</h3>
+      <input type="text" ng-model="list2.itemName" placeholder="item name">
+      <input type="text" ng-model="list2.itemQuantity" placeholder="quantity">
+      <button ng-click="list2.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list2.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list2.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+      <div class="error">Error: {{list2.errorMessage}}</div>
+    </div>
+
+    </div>
+  </body>
+</html> --> 
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Service Through a Provider</title>
+  </head>
+  <body>
+    <h1>Custom Service Through a Provider</h1> -->
+
+    <!-- Preconfigured List -->
+    <!-- <div id="list" ng-controller='ShoppingListController as list'>
+      <h3>Shopping List</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+      <div class="error">Error: {{list.errorMessage}}</div>
+    </div>
+
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Service</title>
+  </head>
+  <body>
+    <h1>Custom Service Through a Factory</h1> -->
+
+    <!-- Preconfigured List -->
+    <!-- <div id="list" ng-controller='ShoppingListController as list'>
+      <h3>Shopping List</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list.items">
+          {{ item.quantity }} of {{ item.name }}
+          <button ng-click="list.removeItem($index);">Remove Item</button>
+        </li>
+      </ol> -->
+      <!-- <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
+      <!-- <div ng-show="list.errorMessage" class="error">Error: {{list.errorMessage}}</div> -->
+      <!-- <div ng-hide="!list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+    </div>
+
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListPromiseApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping List with a Promise</title>
+  </head>
+  <body>
+    <h1>Shopping List with a Promise</h1>
+
+    <div ng-controller='ShoppingListController as list'>
+      <h3>Shopping List</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity"> boxes
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <li ng-repeat="item in list.items">
+          {{ item.quantity }} boxes of {{ item.name }}
+          <button ng-click="list.removeItem($index);">Remove Item</button>
+        </li>
+      </ol>
+    </div>
+
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='MenuCategoriesApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Using $http Service</title>
+  </head>
+  <body>
+    <h1>Using $http Service</h1>
+
+    <div ng-controller='MenuCategoriesController as menu'>
+      <h3>List of Menu Categories</h3>
+      <ul>
+        <li ng-repeat="category in menu.categories">
+          (<a href="" ng-click="menu.logMenuItems(category.short_name);">{{ category.short_name }}</a>)
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListDirectiveApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Template Expanding Directive</title>
+  </head>
+  <body>
+    <h1>Template Expanding Directive</h1>
+
+    <!-- LIST #1 - unlimited items -->
+    <!-- <div id="list1" ng-controller='ShoppingListController1 as list'>
+      <h3>Shopping List #1</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <list-item ng-repeat="item in list.items"></list-item>
+        
+      </ol>
+      <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+    </div> -->
+
+    <!-- LIST #2 (limited to 3 items) -->
+    <!-- <div id="list2" ng-controller='ShoppingListController2 as list'>
+      <h3>Shopping List #2 (limited to 3 items)</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <list-item ng-repeat="item in list.items"></list-item>
+        <li>
+            <list-item-description></list-item-description>
+            <button ng-click="list.removeItem($index);">Remove Item</button>
+          </li>
+      </ol>
+      <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+    </div>
+
+    </div>
+  </body>
+</html> --> 
+<!-- <html ng-app='ShoppingListDirectiveApp'>
+  <!-- <head>
+    <meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Template Expanding Directive</title>
+  </head>
+  <body>
+    <h1>Template Expanding Directive</h1> -->
+
+    <!-- LIST #1 - unlimited items -->
+    <!-- <div id="list1" ng-controller='ShoppingListController1 as list'>
+      <h3>Shopping List #1</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <list-item ng-repeat="item in list.items"></list-item>
+      </ol>
+      <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+    </div> -->
+
+    <!-- LIST #2 (limited to 3 items) -->
+    <!-- <div id="list2" ng-controller='ShoppingListController2 as list'>
+      <h3>Shopping List #2 (limited to 3 items)</h3>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <ol>
+        <list-item ng-repeat="item in list.items"></list-item>
+      </ol>
+      <div ng-if="list.errorMessage" class="error">Error: {{list.errorMessage}}</div>
+    </div>
+
+    </div>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html ng-app='ShoppingListComponentApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping List With Components</title>
+  </head>
+  <body>
+    <h1>Shopping List With Components</h1>
+
+    <div id="list" ng-controller='ShoppingListController as list'>
+      <input type="text" ng-model="list.itemName" placeholder="item name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+      <span>{{ list.lastRemoved }}</span>
+
+      <shopping-list
+        items="list.items"
+        title="{{list.title}}"
+        on-remove="list.removeItem(index)"></shopping-list>
+
+    </div>
+
+    <!-- -->
